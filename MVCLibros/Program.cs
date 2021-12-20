@@ -9,7 +9,9 @@ builder.Services.AddControllersWithViews();
 //DBCONTEXT CONNECTION!!!!!!
 
 builder.Services.AddDbContext<AppDBContext>(options => options.UseSqlServer(
-    builder.Configuration.GetConnectionString("DefaultConnection")));   
+    builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
